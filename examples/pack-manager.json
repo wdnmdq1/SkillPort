@@ -1,0 +1,7 @@
+{
+  "id": "skillport/manager",
+  "version": "0.1.0",
+  "license": "MIT",
+  "agents": ["claude-code", "codex", "hermes"],
+  "skills": []
+}

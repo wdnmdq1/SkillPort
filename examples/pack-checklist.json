@@ -1,0 +1,7 @@
+{
+  "id": "skillport/checklist",
+  "version": "0.1.0",
+  "license": "MIT",
+  "agents": ["claude-code", "codex", "hermes"],
+  "skills": [{"path": "skills/skillport-checklist", "license": "MIT", "dependencies": []}]
+}

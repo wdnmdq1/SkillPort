@@ -64,4 +64,3 @@ python tools/build_release.py --output dist
 [自动检查结果](docs/VALIDATION.md) · [客户端测试步骤](docs/COMPATIBILITY.md) · [安全边界](SECURITY.md)
 
 代码与自带示例：MIT。社区技能保持各自许可证。
-

@@ -1,0 +1,10 @@
+{
+  "id": "skillport/starter",
+  "version": "0.1.0",
+  "license": "MIT",
+  "agents": ["claude-code", "codex", "hermes"],
+  "skills": [
+    {"path": "skills/skillport-brief", "license": "MIT", "dependencies": []},
+    {"path": "skills/skillport-checklist", "license": "MIT", "dependencies": []}
+  ]
+}

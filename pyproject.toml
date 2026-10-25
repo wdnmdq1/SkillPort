@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillport"
+version = "0.1.0"
+description = "Portable Agent Skills packages for Claude Code, Codex and Hermes"
+requires-python = ">=3.12"
+dependencies = ["PyYAML>=6.0.2,<7"]
+license = "MIT"
+
+[project.scripts]
+skillport = "skillport.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+skillport = ["data/manager/SKILL.md", "data/manager/LICENSE", "data/licenses/*", "data/release.json"]
