@@ -7,7 +7,7 @@
 1. 检查 README 与 COMPATIBILITY 仍准确，不把未测客户端标为 verified。
 2. 运行单元测试及 `python tools/check_submission.py . --online`。
 3. 将 pyproject.toml、src/skillport/__init__.py、examples/pack-*.json 的版本保持一致；当前为 0.1.0。
-4. 推送 `v0.1.0` 标签，触发 Windows 发布工作流。
+4. 推送 `v0.1.0` 标签，或在 Actions 的 Windows release 页面点击 Run workflow。手动运行会按项目版本创建标签，已有版本不会被覆盖。
 5. 工作流从实际 github.repository 和 github.sha 生成固定来源，构建独立 exe、四个数据包、社区索引、发布元数据和 SHA256SUMS，并附到 GitHub Release。
 
 发布之前，本地 `python tools/build_release.py --output dist` 生成的 INSTALL.md 明确说明没有在线地址。正式构建使用：
