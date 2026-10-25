@@ -8,6 +8,8 @@ SkillPort 是建立在 [Agent Skills](https://agentskills.io/specification) 之�
 
 ## 给使用者
 
+[下载示例合集](https://github.com/wdnmdq1/SkillPort/releases/download/v0.1.0/skillport-starter-0.1.0.zip) · [仅安装技能管家](https://github.com/wdnmdq1/SkillPort/releases/download/v0.1.0/skillport-manager-0.1.0.zip)
+
 使用官方发行包：下载一个技能 ZIP → 拖入当前 Agent → 发送“安装这个包”。Agent 读取 `INSTALL.md`，获取固定版本的官方安装工具，检查并安装；首次同时装入技能管家。必要权限由宿主处理。
 
 本地预发布：使用同批提供的 `skillport.exe` 和技能 ZIP。Agent 需要能读取本地 ZIP，并能调用同目录的工具；若 ZIP 附件不可读，该客户端的拖拽验收仍为未通过，提供本地路径仅是备用方式。
@@ -43,7 +45,7 @@ SkillPort 是建立在 [Agent Skills](https://agentskills.io/specification) 之�
 .\skillport.exe inspect .\skillport-starter-0.1.0.zip
 .\skillport.exe install .\skillport-starter-0.1.0.zip --agent codex
 .\skillport.exe list --agent codex
-.\skillport.exe search 摘要
+.\skillport.exe search brief
 .\skillport.exe get skillport/brief --package-version 0.1.0 --agent codex
 ```
 

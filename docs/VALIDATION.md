@@ -24,3 +24,13 @@
 开发环境运行 `python -m unittest discover -s tests -v`、`python tools/check_submission.py .`。
 
 Windows 独立程序运行 `python tools/smoke_release.py <发行目录> --output <发行目录>/portable-smoke.json`，分别验证三种目录。该脚本只使用临时 home；host_recognition 保持 not-tested。
+
+## 公开发布检查：2026-10-25
+
+- 公开仓库：[wdnmdq1/SkillPort](https://github.com/wdnmdq1/SkillPort)。首版标签 v0.1.0 指向 0fb22761bf24a3ea9b2cfc25210a44e39204439c。
+- [云端发布流程](https://github.com/wdnmdq1/SkillPort/actions/runs/40173807231) 已成功运行，包含 19 项测试、静态包检查、Windows 独立程序构建、隔离安装检查及发行上传。
+- [v0.1.0 Preview](https://github.com/wdnmdq1/SkillPort/releases/tag/v0.1.0) 已公开。12 个发行资产均从公开链接下载，并与 GitHub 返回的 SHA256 核对一致；清单中对应的文件摘要也匹配。
+- 四个技能 ZIP 的清单和内部文件均已校验；INSTALL.md 中的固定工具链接和摘要与正式 exe 一致。
+- 正式 exe 的默认公开目录搜索返回 4 个包；通过 get 在线下载 skillport/brief 0.1.0，并在临时 Codex home 安装成功，同时安装管家。此测试没有写入用户的真实技能目录。
+- SHA256SUMS 还记录了安装器内嵌的三个许可证路径，它们没有作为独立 Release 资产上传；单独下载资产时核对相应文件条目。完整许可证另包含在 THIRD_PARTY_NOTICES.txt 和安装器资源中。
+- 三端真实拖拽、新会话发现与调用、第三方作者提交 PR 的实际体验仍未验收。公开发行和目录安装成功不改变这一边界。
